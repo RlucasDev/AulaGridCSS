@@ -11,6 +11,7 @@ main{
     gap: 24px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat( 100px, 1fr, 1fr);
+    padding: 0 70px;
 }
 section {
     background-color:#fff;
@@ -22,26 +23,44 @@ section {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
+
+.section-metricas > div {
+    padding: 12px 30px;
+    border-radius: 20px;
+}
+
 .div-metricas1{
     background: radial-gradient(#ffffff2a,#5383EC);
-    border-radius:20px ;
 }
 
 .div-metricas2{
     background: radial-gradient( #ffffff2a,#9C55EC);
-    border-radius:20px ;
 }
 
 .div-metricas3{
     background: radial-gradient(#ffffff2a,#111E5F);
-    border-radius:20px ;
 }
 
 .div-metricas4{
     background: radial-gradient( #ffffff2a, #F1911E);
-    border-radius:20px ;
 }
 
 .section-metricas, .section-vendas{
     grid-column: span 2;
+}
+
+.section-satisfacao,.section-engajamento{
+    padding: 25px;
+}
+
+.section-satisfacao img{
+    text-align: center;
+}
+
+.section-satisfacao h1 {
+    text-align: left;
+}
+
+.section-vendas{
+    padding: 35px 50px;
 }
