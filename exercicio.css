@@ -4,47 +4,114 @@
     outline: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
+header{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 70px 110px;
+    background-color: #fff;
+}
+
+header h1 {
+    font-weight: 300;
+    color:#23306A;
+    font-size: 26px;
+    width: 600px;
+}
+
+header h1 > span {
+    font-weight: 500;
+}
+
 main{
+    margin-top: -60px;
     background-color: #d9d9d9;
     display: grid;
     gap: 24px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat( 100px, 1fr, 1fr);
+    grid-template-rows: repeat( 100px, 400px, 1fr);
     padding: 0 70px;
 }
 section {
     background-color:#fff;
     border-radius: 20px;
 }
+section img {
+    width: 100%;
+}
+
+section h1 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
 .section-metricas{
     background-color: transparent;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    color: #fff;
 }
 
 .section-metricas > div {
     padding: 12px 30px;
     border-radius: 20px;
+    z-index: 2;
 }
 
 .div-metricas1{
-    background: radial-gradient(#ffffff2a,#5383EC);
+    background: radial-gradient(circle at top center, #9bb7f4,#5383EC);
 }
 
 .div-metricas2{
-    background: radial-gradient( #ffffff2a,#9C55EC);
+    background: radial-gradient(circle at top center, #d0aef6,#9C55EC);
 }
 
 .div-metricas3{
-    background: radial-gradient(#ffffff2a,#111E5F);
+    background: radial-gradient(circle at top center, #8f95b4,#111E5F);
 }
 
 .div-metricas4{
-    background: radial-gradient( #ffffff2a, #F1911E);
+    background: radial-gradient(circle at top center, #f8c68b, #F1911E);
 }
 
+.metrica-span1 {
+    font-size: 36px;
+    font-weight: 600;
+    display: block;
+}
+
+.metrica-span2 {
+    color: #82FFB7;
+}
+
+.metrica-span2::before {
+    content: url(./assets/setinha.svg);
+    margin-right: 5px;
+}
+
+.adocao, .retencao, .engajamento, .sucesso, .section-vendas h1 {
+   display: flex;
+   justify-content: space-between;
+}
+
+.adocao::after {
+    content:url(assets/icn4.svg) ;
+}
+.retencao::after {
+    content:url(./assets/icn3.png);
+}
+
+.engajamento::after {
+    content:url(assets/icn1.svg);
+}
+
+.sucesso::after{
+    content:url(assets/icn2.svg);
+}
 .section-metricas, .section-vendas{
     grid-column: span 2;
 }
@@ -61,6 +128,27 @@ section {
     text-align: left;
 }
 
+.section-satisfacao img {
+    width: 60%;
+    margin-top: 20px;
+}
+
 .section-vendas{
     padding: 35px 50px;
+}
+
+.section-engajamento h1, .section-satisfacao h1, .section-vendas h1{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-engajamento h1::before {
+    content: url(./assets/inc6.svg);
+}
+.section-satisfacao h1::before{
+    content: url(./assets/icn5.svg);
+}
+.section-vendas h1::after{
+    content: url(./assets/fi-br-money.svg);
 }
